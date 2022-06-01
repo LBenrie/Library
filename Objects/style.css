@@ -1,0 +1,259 @@
+body {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.sing-nav {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+}
+
+.sing {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.sing ion-icon {
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    font-size: 48px;
+    color: blue;
+    border: 3px solid blue;
+    border-radius: 50%;
+}
+
+.singPopUp {
+    width: fit-content;
+    padding: 15px;
+    position: absolute;
+    background-color: rgba(93, 91, 91, 0.7);
+    border: 5px solid rgba(93, 91, 91, 0.7);
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.nav {
+    text-align: end;
+}
+
+.nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.searchO {
+    display: flex;
+    align-items: center;
+}
+
+.nav ion-icon{
+    font-weight: bolder;
+    border: 4px solid black;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.nav input {
+    border: 4px solid black;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+main {
+    display: flex;
+}
+
+.mainContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: rgba(186, 172, 172, 0.7);
+}
+
+.mainContent ion-icon {
+    font-size: 120px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.creatBook:hover {
+    cursor: pointer;
+}
+
+.creatLibrary:hover {
+    cursor: pointer;
+}
+
+.navOne:hover {
+    cursor: pointer;
+}
+
+.navTwo:hover {
+    cursor: pointer;
+}
+
+
+.sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidebar li:hover {
+    cursor: pointer;
+}
+
+.bookForm, .libraryForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: open-selector;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theBForm, .theLForm {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 4px solid rgba(186, 172, 172, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: right;
+}
+
+#theBForm div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.theLForm div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.closer {
+    font-weight: bolder;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    margin-bottom: 15px;
+}
+
+.closer:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.closerL {
+    font-weight: bolder;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    margin-bottom: 15px;
+}
+
+.closerL:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.selectorClose {
+    animation-name: close-selector;
+    max-width: 5px;
+    max-height: 5px;
+    animation-duration: 0s;
+}
+
+.content {
+    display: flex;
+    margin: 25px;
+    padding: 0;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.content button {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+}
+
+.actualBook {
+    display: flex;
+}
+
+.collections {
+    background: rgba(255, 255, 255, 0.7);   
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+@keyframes open-selector {
+    from {opacity: 0;}
+    to {opacity: 1;}
+
+}
+
+
+@keyframes close-selector {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}

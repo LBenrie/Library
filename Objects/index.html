@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://hun-nal-ye.com/wp-content/uploads/2015/12/books3.jpg" alt="">
+            <h1>My Library</h1>
+        </div>
+        <div class="sing-nav">
+            <div class="sing">
+                <ion-icon class="icon" name="person-outline"></ion-icon>
+                <form class="singPopUp hidden">
+                    <div class="inp">                    
+                        <label for="user">User Name:</label><input type="text" name="user" id="user">
+                    </div>
+                    <div class="inp">
+                        <label for="pasword">Password</label><input type="password" name="pasword" id="pasword">
+                    </div>
+                    <button>Log In</button>
+                    <p>Creat account <a href="#">here</a>.</p>
+                </form>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="navOne">BOOKS</li>
+                    <li class="navTwo">LIBRARIES</li>
+                    <li><div class="searchO hidden">
+                            <ion-icon name="search-outline"></ion-icon><input placeholder="SEARCH" type="text"></input>
+                        </div><p class="searchT">SEARCH</p></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="bookForm hidden">  
+        <div id="theBForm">
+            <button class="closer">X</button>
+            <div>
+                <label for="Title">Title:</label><input type="text" name="Title" id="Title">
+            </div>
+            <div>
+                <label for="Author">Author:</label><input type="text" name="Author" id="Author">
+            </div>
+            <div>
+                <label for="Gender">Gender:</label><input type="text" name="Gender" id="Gender">
+            </div>
+            <div>
+                <label for="Pages">Numbre of pages:</label><input type="number" name="Pages" id="Pages">
+            </div>
+            <div>
+                <label for="Year">Publication Year:</label><input type="number" name="Year" id="Year" min="1">
+            </div>
+            <div>
+                <label for="Read">Have you Read it?</label><input type="checkbox" name="Read" id="Read" required>
+            </div>
+            <div>
+                <label for="Saga">Is it a Saga?</label><input type="checkbox" name="Saga" id="Saga">
+            </div>
+            <button id="subm">Submit</button>
+        </div>
+    </div>
+    <div class="libraryForm hidden">
+        <div class="theLForm">
+            <button class="closerL">X</button>
+            <div>
+                <label for="Name">Name:</label><input type="text" name="Name" id="Name">
+            </div>
+            <div>
+                <label for="Creator">Creator:</label><input type="text" name="Creator" id="Creator">
+            </div>
+            <button id="submL">Submit</button>
+        </div>
+    </div>
+    <main>
+        <div class="sidebar hidden">
+            <h4>BOOKS</h4>
+            <ul> 
+                <li>All(<p class="allB">0</p>)</li>
+                <li>Sagas(<p class="allS">0</p>)</li>
+                <li>Short Stories(<p class="allSS">0</p>)</li>
+                <li>Favorites(<p class="allF">0</p>)</li>
+                <li>MostPopular</li>
+            </ul>
+            <h4>LIBRARIES</h4>
+            <ul>
+                <li>All(<p class="allL">0</p>)</li>
+                <li>Favorites(<p class="allLF">0</p>)</li>
+                <li>MostPopular</li>
+                <li>My Libraries(<p class="allM">0</p>)</li>
+            </ul>
+        </div>
+        <div class="mainContent">
+            <div class="creatBook">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <h2>New Book</h2>
+            </div>
+            <div class="creatLibrary">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <h2>New Library</h2>
+            </div>
+        </div>
+        <div class="library hidden">
+            <div class="mainsearch">
+                <div class="one">
+                    <label for="mSearch">Search</label>
+                    <input type="text" name="mSearch" id="mSearch">
+                </div>
+                <div class="content">
+                    <div class="bookContent hidden">
+                        <button class="addBook"><ion-icon name="add-outline"></ion-icon></button>
+                        <h4 class="bContMess"></h4>
+                        <div class="actualBook">
+
+                        </div>
+                    </div>
+                    <div class="libraryContetn hidden">
+                        <button class="addBook"><ion-icon name="add-outline"></ion-icon></button>
+                        <h4 class="lContMess"></h4>
+                        <div class="actualBook">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="bookMark.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
